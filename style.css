@@ -1144,6 +1144,46 @@ nav a:hover {
     display: block;
 }
 
+.map-consent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: var(--space-lg);
+    background: var(--cream);
+    text-align: center;
+}
+
+.map-consent p {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: var(--space-xs);
+}
+
+.map-consent .consent-warning {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: var(--space-md);
+}
+
+.consent-button {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-green);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.consent-button:hover {
+    background: #007a5a;
+    transform: translateY(-2px);
+}
+
 .map-privacy-note {
     font-size: 0.9rem;
     color: var(--text-light);

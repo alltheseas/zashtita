@@ -532,20 +532,19 @@
                 <p class="section-intro">
                     Интерактивна карта на търговци и бизнеси в България, които приемат биткойн.
                 </p>
-                <p class="map-privacy-note">
-                    ⚠️ Картата се зарежда от btcmap.org. При зареждане, Вашият IP адрес ще бъде видим за този сайт.
-                </p>
-                <div class="btc-map-container">
-                    <iframe
-                        src="https://btcmap.org/map#7/42.7/25.5"
-                        width="100%"
-                        height="500"
-                        frameborder="0"
-                        allowfullscreen
-                        loading="lazy"
-                        title="BTC Map България">
-                    </iframe>
+                <div class="btc-map-container" id="btc-map-container">
+                    <div class="map-consent" id="map-consent">
+                        <p>Искате ли да заредите картата с търговци?</p>
+                        <p class="consent-warning">Ако изберете да, ще споделите Вашия IP адрес с btcmap.org.</p>
+                        <button onclick="loadBtcMap()" class="consent-button">Да, зареди картата</button>
+                    </div>
                 </div>
+                <script>
+                function loadBtcMap() {
+                    const container = document.getElementById('btc-map-container');
+                    container.innerHTML = '<iframe src="https://btcmap.org/map#7/42.7/25.5" width="100%" height="500" frameborder="0" allowfullscreen loading="lazy" title="BTC Map България"></iframe>';
+                }
+                </script>
                 <p class="map-link">
                     <a href="https://btcmap.org/country/bg/merchants" target="_blank" rel="noopener">Отвори пълната карта →</a>
                 </p>
