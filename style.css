@@ -1,0 +1,702 @@
+/* === Bulgarian-inspired Design System === */
+
+:root {
+    /* Bulgarian national colors */
+    --bg-white: #FFFFFF;
+    --bg-green: #00966E;
+    --bg-red: #D62612;
+
+    /* Extended palette */
+    --cream: #FDF8F3;
+    --dark: #1a1a1a;
+    --text: #2d2d2d;
+    --text-light: #666;
+    --gold: #C9A227;
+    --gold-light: #E8D5A3;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+}
+
+/* === Reset & Base === */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--cream);
+}
+
+/* === Шевица Border Pattern - Cross-stitch Style === */
+.shevitsa-border {
+    height: 48px;
+    background-color: var(--cream);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cross-stitch pixel pattern */
+.shevitsa-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        /* Row 1 - small red diamonds */
+        repeating-linear-gradient(90deg,
+            transparent 0px, transparent 8px,
+            var(--bg-red) 8px, var(--bg-red) 16px,
+            transparent 16px, transparent 32px
+        ),
+        /* Row 2 - cross pattern */
+        repeating-linear-gradient(90deg,
+            var(--bg-red) 0px, var(--bg-red) 8px,
+            transparent 8px, transparent 16px,
+            var(--bg-red) 16px, var(--bg-red) 24px,
+            transparent 24px, transparent 32px
+        ),
+        /* Row 3 - center with green accents */
+        repeating-linear-gradient(90deg,
+            transparent 0px, transparent 4px,
+            var(--bg-red) 4px, var(--bg-red) 12px,
+            var(--bg-green) 12px, var(--bg-green) 20px,
+            var(--bg-red) 20px, var(--bg-red) 28px,
+            transparent 28px, transparent 32px
+        );
+    background-size: 32px 16px;
+    background-position:
+        0 0,
+        0 16px,
+        0 32px;
+    background-repeat: repeat-x;
+}
+
+.shevitsa-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--bg-red);
+}
+
+.shevitsa-border.bottom {
+    transform: rotate(180deg);
+}
+
+/* Decorative cross motif for sections */
+.cross-motif {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-md);
+    position: relative;
+    opacity: 0.8;
+}
+
+.cross-motif::before,
+.cross-motif::after {
+    content: '';
+    position: absolute;
+    background: var(--bg-red);
+}
+
+.cross-motif::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 8px;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg,
+        transparent 0%, transparent 20%,
+        var(--bg-red) 20%, var(--bg-red) 35%,
+        var(--bg-green) 35%, var(--bg-green) 40%,
+        var(--bg-red) 40%, var(--bg-red) 60%,
+        var(--bg-green) 60%, var(--bg-green) 65%,
+        var(--bg-red) 65%, var(--bg-red) 80%,
+        transparent 80%, transparent 100%
+    );
+}
+
+.cross-motif::after {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    transform: translateX(-50%);
+    background: linear-gradient(180deg,
+        transparent 0%, transparent 20%,
+        var(--bg-red) 20%, var(--bg-red) 35%,
+        var(--bg-green) 35%, var(--bg-green) 40%,
+        var(--bg-red) 40%, var(--bg-red) 60%,
+        var(--bg-green) 60%, var(--bg-green) 65%,
+        var(--bg-red) 65%, var(--bg-red) 80%,
+        transparent 80%, transparent 100%
+    );
+}
+
+/* === Typography === */
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    margin-bottom: var(--space-md);
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--bg-red), var(--bg-green));
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+/* === Layout === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section-alt {
+    background: var(--bg-white);
+}
+
+.section-intro {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+}
+
+/* === Navigation === */
+header {
+    background: var(--bg-white);
+    padding: var(--space-sm) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--space-md);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--bg-green);
+}
+
+/* === Hero Section === */
+.hero {
+    padding: var(--space-xl) 0;
+    background:
+        linear-gradient(135deg, rgba(0, 150, 110, 0.03) 0%, transparent 50%),
+        linear-gradient(-135deg, rgba(214, 38, 18, 0.03) 0%, transparent 50%),
+        var(--cream);
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-motif {
+    margin-bottom: var(--space-md);
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.hero h1 {
+    margin-bottom: var(--space-xs);
+}
+
+.hero .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--bg-red);
+    margin-bottom: var(--space-md);
+}
+
+.hero .intro {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto var(--space-md);
+    color: var(--text-light);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-green);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.cta-button:hover {
+    background: #007a5a;
+    transform: translateY(-2px);
+}
+
+/* === Risk Cards === */
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-md);
+}
+
+.risk-card {
+    background: var(--bg-white);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--bg-red);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.risk-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.risk-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.risk-card h3 {
+    color: var(--bg-red);
+}
+
+.risk-card p {
+    color: var(--text-light);
+}
+
+/* === Comparison Table === */
+.comparison-table {
+    background: var(--cream);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-row.header {
+    background: var(--dark);
+    color: white;
+    font-weight: 600;
+}
+
+.comparison-row.header .highlight {
+    background: var(--bg-green);
+}
+
+.comparison-cell {
+    padding: var(--space-sm) var(--space-md);
+}
+
+.comparison-cell.label {
+    font-weight: 600;
+    background: rgba(0,0,0,0.02);
+}
+
+.comparison-cell.good {
+    color: var(--bg-green);
+    font-weight: 600;
+}
+
+.comparison-cell.bad {
+    color: var(--bg-red);
+}
+
+/* === Nigeria Case Study === */
+.nigeria-case {
+    background: linear-gradient(135deg, var(--gold-light), #fff);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+    margin-top: var(--space-md);
+}
+
+.nigeria-case h3 {
+    color: var(--gold);
+}
+
+/* === Steps Grid === */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.step-card {
+    background: var(--bg-white);
+    padding: var(--space-md);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -12px;
+    left: var(--space-md);
+    width: 40px;
+    height: 40px;
+    background: var(--bg-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.step-card h3 {
+    margin-top: var(--space-sm);
+    color: var(--dark);
+}
+
+.step-card ul {
+    margin-top: var(--space-sm);
+    padding-left: var(--space-md);
+}
+
+.step-card li {
+    margin-bottom: var(--space-xs);
+    color: var(--text-light);
+}
+
+/* === Warning Box === */
+.warning-box {
+    background: linear-gradient(135deg, #fff3cd, #fff);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.warning-box h3 {
+    color: #856404;
+    margin-bottom: var(--space-xs);
+}
+
+/* === Resources === */
+/* === Primary Bulgarian Resources === */
+.resource-primary {
+    background: linear-gradient(135deg, var(--bg-white), var(--cream));
+    border: 3px solid var(--bg-red);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    position: relative;
+}
+
+.resource-primary::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 20px;
+    right: 20px;
+    height: 6px;
+    background: linear-gradient(90deg, var(--bg-red), var(--bg-green), var(--bg-red));
+}
+
+.resource-primary h3 {
+    color: var(--bg-red);
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.resource-primary h3::after {
+    background: var(--bg-red);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.resource-primary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+}
+
+.resource-link-primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--bg-white);
+    border-radius: 8px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.resource-link-primary:hover {
+    border-color: var(--bg-green);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.resource-link-primary strong {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xs);
+}
+
+.resource-link-primary span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* === Secondary Resources === */
+.resources-secondary {
+    margin-top: var(--space-md);
+}
+
+.resources-secondary summary {
+    cursor: pointer;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--cream);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.resources-secondary summary:hover {
+    background: #f0ebe4;
+}
+
+.resources-secondary[open] summary {
+    margin-bottom: var(--space-md);
+}
+
+.resources-secondary .resources-grid {
+    padding: var(--space-sm);
+}
+
+/* === Resources Grid === */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+}
+
+.resource-category {
+    background: var(--cream);
+    padding: var(--space-md);
+    border-radius: 8px;
+}
+
+.resource-category h3 {
+    color: var(--bg-green);
+    border-bottom: 2px solid var(--bg-green);
+    padding-bottom: var(--space-xs);
+    margin-bottom: var(--space-sm);
+}
+
+.resource-category ul {
+    list-style: none;
+}
+
+.resource-category li {
+    margin-bottom: var(--space-xs);
+    padding-left: var(--space-sm);
+    position: relative;
+}
+
+.resource-category li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--bg-green);
+}
+
+.resource-category a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.resource-category a:hover {
+    color: var(--bg-green);
+}
+
+/* === Footer === */
+footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.8);
+    padding: var(--space-lg) 0 var(--space-md);
+    text-align: center;
+}
+
+footer .shevitsa-pattern {
+    height: 32px;
+    margin-bottom: var(--space-md);
+    background-image:
+        /* Cross-stitch row pattern */
+        repeating-linear-gradient(90deg,
+            var(--bg-red) 0px, var(--bg-red) 4px,
+            transparent 4px, transparent 8px,
+            var(--bg-red) 8px, var(--bg-red) 12px,
+            transparent 12px, transparent 16px,
+            var(--bg-green) 16px, var(--bg-green) 20px,
+            transparent 20px, transparent 24px,
+            var(--bg-red) 24px, var(--bg-red) 28px,
+            transparent 28px, transparent 32px
+        );
+    background-size: 32px 4px;
+    background-repeat: repeat;
+    opacity: 0.9;
+}
+
+.footer-note {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: var(--space-xs);
+}
+
+footer .sources {
+    margin-top: var(--space-sm);
+    font-size: 0.875rem;
+}
+
+footer a {
+    color: rgba(255,255,255,0.8);
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--gold);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .comparison-row {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-row.header {
+        display: none;
+    }
+
+    .comparison-cell {
+        display: flex;
+        justify-content: space-between;
+        padding: var(--space-xs) var(--space-sm);
+    }
+
+    .comparison-cell.label {
+        background: var(--dark);
+        color: white;
+        font-weight: 600;
+    }
+
+    .comparison-cell::before {
+        content: attr(data-label);
+        font-weight: 600;
+    }
+
+    nav ul {
+        gap: var(--space-sm);
+        font-size: 0.875rem;
+    }
+}
+
+/* === Animations === */
+@media (prefers-reduced-motion: no-preference) {
+    .risk-card,
+    .step-card,
+    .resource-category {
+        animation: fadeInUp 0.5s ease-out;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
