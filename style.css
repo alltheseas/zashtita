@@ -608,7 +608,7 @@ nav a:hover {
 /* === Media Note === */
 .media-note {
     margin-top: var(--space-lg);
-    text-align: center;
+    text-align: left;
 }
 
 .media-warning {
