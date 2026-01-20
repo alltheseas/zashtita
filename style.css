@@ -486,6 +486,16 @@ nav a:hover {
     margin: 0;
 }
 
+.quote-author a {
+    color: var(--bg-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.quote-author a:hover {
+    text-decoration: underline;
+}
+
 /* === Lagarde Video === */
 .lagarde-video {
     margin-top: var(--space-lg);
