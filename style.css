@@ -395,6 +395,44 @@ nav a:hover {
     color: var(--text);
 }
 
+/* === Greece Case Study === */
+.greece-case {
+    background: var(--bg-white);
+    border: 3px solid var(--bg-red);
+    border-radius: 8px;
+    padding: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.greece-case h3 {
+    color: var(--bg-red);
+    margin-bottom: var(--space-md);
+}
+
+.greece-case p {
+    margin-bottom: var(--space-sm);
+    color: var(--text);
+}
+
+.greece-case ul {
+    margin: 0 0 var(--space-sm) var(--space-md);
+    color: var(--text);
+}
+
+.greece-case li {
+    margin-bottom: var(--space-xs);
+}
+
+.greece-warning {
+    background: var(--bg-red);
+    color: white;
+    padding: var(--space-sm);
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: var(--space-md);
+    margin-bottom: 0;
+}
+
 /* === Comparison Table === */
 .comparison-table {
     background: var(--cream);
