@@ -375,13 +375,23 @@ nav a:hover {
     border-left: 4px solid var(--bg-red);
     border-radius: 0 8px 8px 0;
     text-align: left;
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
 }
 
-.lagarde-democracy-quote p:first-child {
+.lagarde-democracy-quote .quote-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.lagarde-democracy-quote .quote-content p:first-child {
     font-size: 1.3rem;
     font-style: italic;
     margin-bottom: var(--space-sm);
-    font-style: italic;
 }
 
 /* === Risk Cards === */
