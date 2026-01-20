@@ -453,6 +453,39 @@ nav a:hover {
     font-style: italic;
 }
 
+/* === Elite Quotes === */
+.elite-quotes {
+    margin-top: var(--space-lg);
+}
+
+.elite-quotes h3 {
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: var(--space-md);
+}
+
+.quote-card {
+    background: var(--bg-white);
+    border-left: 4px solid var(--bg-red);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+}
+
+.quote-author {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 /* === Lagarde Video === */
 .lagarde-video {
     margin-top: var(--space-lg);
