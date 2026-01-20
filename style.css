@@ -366,6 +366,21 @@ nav a:hover {
 .referendum-caption {
     font-size: 0.9rem;
     color: var(--text);
+}
+
+.lagarde-democracy-quote {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background: rgba(214, 38, 18, 0.1);
+    border-left: 4px solid var(--bg-red);
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+}
+
+.lagarde-democracy-quote p:first-child {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: var(--space-sm);
     font-style: italic;
 }
 
