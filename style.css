@@ -342,6 +342,25 @@ nav a:hover {
     color: var(--text);
 }
 
+.referendum-proof {
+    margin-top: var(--space-md);
+    text-align: center;
+}
+
+.referendum-img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: var(--space-sm);
+}
+
+.referendum-caption {
+    font-size: 0.9rem;
+    color: var(--text);
+    font-style: italic;
+}
+
 /* === Risk Cards === */
 .risk-grid {
     display: grid;
