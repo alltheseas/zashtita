@@ -484,6 +484,26 @@ nav a:hover {
     height: 100%;
 }
 
+/* === Media Note === */
+.media-note {
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+.media-img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: var(--space-sm);
+}
+
+.media-note p {
+    color: var(--bg-red);
+    font-weight: 600;
+    font-style: italic;
+}
+
 /* === Comparison Table === */
 .comparison-table {
     background: var(--cream);
