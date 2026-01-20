@@ -9,9 +9,9 @@
     /* Extended palette */
     --cream: #FDF8F3;
     --dark: #1a1a1a;
-    --text: #2d2d2d;
-    --text-light: #666;
-    --gold: #C9A227;
+    --text: #1a1a1a;
+    --text-light: #3d3d3d;
+    --gold: #996B00;
     --gold-light: #E8D5A3;
 
     /* Spacing */
@@ -202,7 +202,7 @@ h3 {
 
 .section-intro {
     font-size: 1.25rem;
-    color: var(--text-light);
+    color: var(--text);
     max-width: 800px;
     margin-bottom: var(--space-lg);
 }
@@ -292,7 +292,7 @@ nav a:hover {
     font-size: 1.25rem;
     max-width: 700px;
     margin: 0 auto var(--space-md);
-    color: var(--text-light);
+    color: var(--text);
 }
 
 .cta-button {
@@ -373,7 +373,7 @@ nav a:hover {
 }
 
 .risk-card p {
-    color: var(--text-light);
+    color: var(--text);
 }
 
 /* === Comparison Table === */
@@ -443,7 +443,7 @@ nav a:hover {
 }
 
 .cash-card p {
-    color: var(--text-light);
+    color: var(--text);
 }
 
 .cash-warning {
@@ -526,7 +526,7 @@ nav a:hover {
 
 .step-card li {
     margin-bottom: var(--space-xs);
-    color: var(--text-light);
+    color: var(--text);
 }
 
 /* === Warning Box === */
@@ -609,7 +609,7 @@ nav a:hover {
 }
 
 .resource-link-primary span {
-    color: var(--text-light);
+    color: var(--text);
     font-size: 0.9rem;
 }
 
