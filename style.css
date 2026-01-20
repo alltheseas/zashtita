@@ -498,6 +498,112 @@ nav a:hover {
     margin-bottom: 0;
 }
 
+/* === Bulgarian Constitution Section === */
+.bulgarian-constitution {
+    background: linear-gradient(135deg, #fef9f0, var(--cream));
+}
+
+.constitution-intro {
+    font-size: 1.15rem;
+    color: var(--text);
+    max-width: 800px;
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.constitution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.constitution-card {
+    background: var(--bg-white);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--gold);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.constitution-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.constitution-card h3 {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+}
+
+.constitution-quote {
+    font-style: italic;
+    color: var(--text);
+    background: linear-gradient(135deg, var(--gold-light), #fff);
+    padding: var(--space-sm);
+    border-left: 3px solid var(--gold);
+    margin-bottom: var(--space-sm);
+    font-size: 0.95rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.constitution-violation {
+    color: var(--bg-red);
+    font-weight: 600;
+    padding-top: var(--space-xs);
+}
+
+.constitution-supreme {
+    background: linear-gradient(135deg, var(--bg-white), var(--gold-light));
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.constitution-supreme h3 {
+    color: var(--gold);
+    margin-bottom: var(--space-sm);
+    font-size: 1.25rem;
+}
+
+.constitution-supreme .constitution-quote {
+    background: var(--bg-white);
+    margin-bottom: var(--space-sm);
+}
+
+.constitution-supreme .constitution-quote:last-of-type {
+    margin-bottom: var(--space-md);
+}
+
+.constitution-supreme p {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.constitution-conclusion {
+    background: var(--bg-red);
+    color: white;
+    padding: var(--space-md);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.constitution-conclusion p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Mobile responsive for Constitution section */
+@media (max-width: 768px) {
+    .constitution-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* === Cash Section === */
 .cash-benefits {
     display: grid;
