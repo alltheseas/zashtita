@@ -473,6 +473,37 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+.quote-card.with-photo {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+}
+
+.quote-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.quote-content {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .quote-card.with-photo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quote-photo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 .quote-text {
     font-size: 1.1rem;
     color: var(--text);
@@ -1112,6 +1143,12 @@ footer .shevitsa-pattern {
 footer .sources {
     margin-top: var(--space-sm);
     font-size: 0.875rem;
+}
+
+.image-credits {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: var(--space-xs);
 }
 
 .visitor-counter {
