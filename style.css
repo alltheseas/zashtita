@@ -241,6 +241,14 @@ nav {
     height: 32px;
 }
 
+.bitcoin-icon,
+.cash-icon {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+
 nav ul {
     display: flex;
     list-style: none;
