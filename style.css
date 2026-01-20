@@ -484,6 +484,12 @@ nav a:hover {
     height: 100%;
 }
 
+.video-note {
+    margin-top: var(--space-sm);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
 /* === Media Note === */
 .media-note {
     margin-top: var(--space-lg);
