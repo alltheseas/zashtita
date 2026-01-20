@@ -394,6 +394,18 @@ nav a:hover {
     margin-bottom: var(--space-sm);
 }
 
+.obektivno-proof {
+    margin-top: var(--space-md);
+    text-align: center;
+}
+
+.obektivno-img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 /* === Risk Cards === */
 .risk-grid {
     display: grid;
