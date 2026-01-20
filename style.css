@@ -424,8 +424,9 @@ nav a:hover {
 }
 
 .greece-warning {
-    background: var(--bg-red);
-    color: white;
+    background: var(--bg-white);
+    color: var(--bg-red);
+    border: 2px solid var(--bg-red);
     padding: var(--space-sm);
     border-radius: 4px;
     font-weight: 600;
