@@ -422,6 +422,54 @@ nav a:hover {
     color: var(--bg-red);
 }
 
+/* === Cash Section === */
+.cash-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.cash-card {
+    background: var(--cream);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--bg-green);
+}
+
+.cash-card h3 {
+    color: var(--bg-green);
+    margin-bottom: var(--space-xs);
+}
+
+.cash-card p {
+    color: var(--text-light);
+}
+
+.cash-warning {
+    background: linear-gradient(135deg, #fff3cd, #fff);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: var(--space-md);
+}
+
+.cash-warning h3 {
+    color: #856404;
+    margin-bottom: var(--space-sm);
+}
+
+.cash-warning p {
+    margin-bottom: var(--space-sm);
+}
+
+.cash-warning p:last-child {
+    margin-bottom: 0;
+}
+
+.cash-warning em {
+    font-style: italic;
+}
+
 /* === Nigeria Case Study === */
 .nigeria-case {
     background: linear-gradient(135deg, var(--gold-light), #fff);
