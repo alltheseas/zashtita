@@ -774,13 +774,12 @@ nav a:hover {
     background: var(--bg-white);
     border-radius: 8px;
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 2px solid var(--bg-green);
     transition: all 0.2s;
     text-align: center;
 }
 
 .resource-link-primary:hover {
-    border-color: var(--bg-green);
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
