@@ -918,6 +918,33 @@ nav a:hover {
     color: var(--bg-green);
 }
 
+/* === BTC Map Section === */
+.btc-map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--bg-green);
+    margin-bottom: var(--space-md);
+}
+
+.btc-map-container iframe {
+    display: block;
+}
+
+.map-link {
+    text-align: center;
+}
+
+.map-link a {
+    color: var(--bg-green);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.map-link a:hover {
+    color: var(--dark);
+}
+
 /* === Footer === */
 footer {
     background: var(--dark);
