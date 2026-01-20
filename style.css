@@ -441,6 +441,63 @@ nav a:hover {
     color: var(--bg-red);
 }
 
+/* === Human Rights Section === */
+.rights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.rights-card {
+    background: var(--bg-white);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border-top: 4px solid var(--bg-red);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.rights-card h3 {
+    color: var(--dark);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+}
+
+.rights-quote {
+    font-style: italic;
+    color: var(--text);
+    background: var(--cream);
+    padding: var(--space-sm);
+    border-left: 3px solid var(--bg-green);
+    margin-bottom: var(--space-sm);
+    font-size: 0.95rem;
+}
+
+.rights-violation {
+    color: var(--bg-red);
+    font-weight: 600;
+}
+
+.rights-resistance {
+    background: var(--cream);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+}
+
+.rights-resistance h3 {
+    color: var(--gold);
+    margin-bottom: var(--space-sm);
+}
+
+.rights-resistance p {
+    margin-bottom: var(--space-sm);
+}
+
+.rights-resistance p:last-child {
+    margin-bottom: 0;
+}
+
 /* === Cash Section === */
 .cash-benefits {
     display: grid;
@@ -868,6 +925,11 @@ footer a:hover {
 
     /* Risk cards */
     .risk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Rights */
+    .rights-grid {
         grid-template-columns: 1fr;
     }
 
