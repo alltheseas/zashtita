@@ -737,34 +737,135 @@ footer a:hover {
 
 /* === Responsive === */
 @media (max-width: 768px) {
-    .comparison-row {
-        grid-template-columns: 1fr;
+    /* Navigation */
+    header {
+        padding: var(--space-xs) 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: var(--space-xs);
+    }
+
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        gap: var(--space-xs);
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .logo-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 50vh;
+        padding: var(--space-lg) 0;
+    }
+
+    .hero-motif {
+        width: 80px;
+        height: 80px;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Comparison Table - Card Style */
+    .comparison-table {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
     }
 
     .comparison-row.header {
         display: none;
     }
 
+    .comparison-row {
+        display: block;
+        background: var(--bg-white);
+        border-radius: 8px;
+        padding: var(--space-sm);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
     .comparison-cell {
-        display: flex;
-        justify-content: space-between;
-        padding: var(--space-xs) var(--space-sm);
+        display: block;
+        padding: var(--space-xs) 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .comparison-cell:last-child {
+        border-bottom: none;
     }
 
     .comparison-cell.label {
-        background: var(--dark);
-        color: white;
-        font-weight: 600;
+        background: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--dark);
+        padding-bottom: var(--space-xs);
+        margin-bottom: var(--space-xs);
+        border-bottom: 2px solid var(--bg-green);
     }
 
-    .comparison-cell::before {
-        content: attr(data-label);
+    .comparison-cell.bad::before {
+        content: "Цифрово евро: ";
         font-weight: 600;
+        color: var(--text);
     }
 
-    nav ul {
-        gap: var(--space-sm);
-        font-size: 0.875rem;
+    .comparison-cell.good::before {
+        content: "Биткойн: ";
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    /* Section spacing */
+    .section {
+        padding: var(--space-lg) 0;
+    }
+
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    /* Risk cards */
+    .risk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Steps */
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cash */
+    .cash-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    /* Resources */
+    .resource-primary {
+        padding: var(--space-md);
+    }
+
+    .resource-primary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Warning section */
+    .section-warning .container {
+        padding: var(--space-sm);
     }
 }
 
