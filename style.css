@@ -503,6 +503,16 @@ nav a:hover {
     background: linear-gradient(135deg, #fef9f0, var(--cream));
 }
 
+.bulgarian-constitution h3 a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.bulgarian-constitution h3 a:hover {
+    color: var(--bg-green);
+}
+
 .constitution-intro {
     font-size: 1.15rem;
     color: var(--text);
