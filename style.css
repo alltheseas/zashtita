@@ -428,6 +428,14 @@ nav a:hover {
     color: var(--text);
 }
 
+.risk-quote {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid rgba(214, 38, 18, 0.3);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
 /* === Greece Case Study === */
 .greece-case {
     background: var(--bg-white);
