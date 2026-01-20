@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Shield -->
+  <path d="M32 4 L58 10 L58 34 Q58 54 32 60 Q6 54 6 34 L6 10 Z"
+        fill="#D42E12"
+        stroke="#1a1a1a"
+        stroke-width="1.5"/>
+
+  <!-- Lion Rampant - Bulgarian style facing left -->
+  <g fill="#FED018" stroke="#996B0A" stroke-width="0.5">
+
+    <!-- Back leg standing -->
+    <path d="M38 52 Q40 48 38 44 Q36 46 36 50 Q36 53 38 52Z"/>
+    <path d="M37 51 L40 55 L37 55 Q36 53 36 51Z"/>
+
+    <!-- Front leg standing -->
+    <path d="M30 44 Q28 48 29 52 Q31 52 32 48 Q31 45 30 44Z"/>
+    <path d="M30 51 L28 55 L31 55 Q31 53 30 51Z"/>
+
+    <!-- Body -->
+    <path d="M28 42 Q24 38 26 32 Q28 28 34 27 Q40 26 42 32 Q44 38 42 44 Q38 48 32 48 Q28 46 28 42Z"/>
+
+    <!-- Raised front paw -->
+    <path d="M26 32 Q22 28 20 24 Q22 22 24 24 Q26 28 28 32Z"/>
+    <path d="M20 24 Q18 22 16 20 Q18 18 20 20 Q20 22 20 24Z"/>
+
+    <!-- Raised back paw -->
+    <path d="M34 27 Q30 24 28 20 Q30 18 32 20 Q34 24 34 27Z"/>
+    <path d="M28 20 Q26 18 24 16 Q26 14 28 16 Q28 18 28 20Z"/>
+
+    <!-- Tail -->
+    <path d="M42 44 Q48 40 50 32 Q50 26 48 24" fill="none" stroke="#FED018" stroke-width="3.5"/>
+    <path d="M42 44 Q48 40 50 32 Q50 26 48 24" fill="none" stroke="#996B0A" stroke-width="0.5"/>
+    <ellipse cx="48" cy="23" rx="3" ry="4"/>
+
+    <!-- Mane -->
+    <path d="M36 26 Q40 24 40 20 Q38 16 34 16 Q28 16 26 20 Q24 24 26 28 Q30 26 34 26Z"/>
+
+    <!-- Head -->
+    <ellipse cx="32" cy="20" rx="5" ry="4.5"/>
+
+    <!-- Crown -->
+    <path d="M28 16 L29 12 L31 14 L34 10 L37 14 L39 12 L40 16 Q36 17 32 17 Q28 17 28 16Z"/>
+    <circle cx="34" cy="11" r="1" fill="#D42E12"/>
+
+    <!-- Eye -->
+    <circle cx="30" cy="19" r="1" fill="#1a1a1a" stroke="none"/>
+
+    <!-- Tongue -->
+    <path d="M27 22 Q24 25 23 24" fill="#D42E12" stroke="#8B0000" stroke-width="0.3"/>
+  </g>
+</svg>
