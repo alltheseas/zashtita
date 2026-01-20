@@ -1144,6 +1144,13 @@ nav a:hover {
     display: block;
 }
 
+.map-privacy-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+}
+
 .map-link {
     text-align: center;
 }
