@@ -584,10 +584,11 @@ nav a:hover {
 }
 
 .constitution-conclusion {
-    background: var(--bg-red);
-    color: white;
+    background: var(--bg-white);
+    color: var(--bg-red);
     padding: var(--space-md);
     border-radius: 8px;
+    border: 3px solid var(--bg-red);
     text-align: center;
 }
 
