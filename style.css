@@ -989,6 +989,60 @@ nav a:hover {
     margin-bottom: var(--space-xs);
 }
 
+/* === FAQ Section === */
+.faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.faq-card {
+    background: var(--bg-white);
+    padding: var(--space-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--bg-green);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.faq-card h3 {
+    color: var(--dark);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+}
+
+.faq-card p {
+    color: var(--text);
+    margin-bottom: var(--space-sm);
+}
+
+.faq-card ul {
+    margin: var(--space-sm) 0 var(--space-sm) var(--space-md);
+    color: var(--text);
+}
+
+.faq-card li {
+    margin-bottom: var(--space-xs);
+}
+
+.faq-card a {
+    color: var(--bg-green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.faq-card a:hover {
+    text-decoration: underline;
+}
+
+.faq-conclusion {
+    background: var(--cream);
+    padding: var(--space-sm);
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: var(--space-sm);
+    margin-bottom: 0;
+}
+
 /* === Resources === */
 /* === Primary Bulgarian Resources === */
 .resource-primary {
